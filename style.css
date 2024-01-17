@@ -48,6 +48,7 @@ p {
     color: var(--dark-03);
     font-weight: var(--regular);
     width: 60%;
+    line-height: 26px;
 }
 
 h1 {
@@ -86,6 +87,7 @@ input[type="button"], .btn {
     width: fit-content;
     cursor: pointer;
 }
+
 input[type="button"]:hover, .btn:hover {
     background-color: #f66a24;
 }
@@ -135,7 +137,7 @@ nav ul {
     width: var(--d-width);
     margin: 0 auto;
     color: #fff;
-    margin-top: var(--mt-01);
+    margin-top: 3vw;
     text-align: center;
 }
 
@@ -202,6 +204,10 @@ input::placeholder {
     color: rgba(19, 19, 24, 0.483);
 }
 
+.bannar .container input[type="button"] {
+    color: #fff;
+}
+
 .popular-tours {
     width: var(--d-width);
     margin: 0 auto;
@@ -229,19 +235,21 @@ input::placeholder {
 .popular-tours .discription {
     display: flex;
     flex-direction: column;
-    gap: 1.7vw;
+    gap: 2rem;
     height: fit-content;
 }
 
 .popular-tours .discription ul {
     list-style-position: inside;
-    color: inherit;
-    color: #5A5A5D;
+    color: var(--dark-02);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    line-height: 1.5rem;
 }
 
 .popular-tours .discription ul li {
-    /* display: inline-flex; */
-    padding-top: 20px;
+    text-align: justify;
 }
 
 
@@ -256,11 +264,13 @@ input::placeholder {
     gap: 2vw;
     margin-top: var(--mt-01);
 }
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5vw;
 }
+
 .card-container img {
     max-width: 100%;
     min-height: 100%;
@@ -271,13 +281,15 @@ input::placeholder {
     -ms-border-radius: var(--radius-02);
     -o-border-radius: var(--radius-02);
 }
+
 .card-container figure {
     position: relative;
     height: 400px;
 }
-.card-container figure::after{
+
+.card-container figure::after {
     content: "";
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -290,6 +302,7 @@ input::placeholder {
     -ms-border-radius: var(--radius-02);
     -o-border-radius: var(--radius-02);
 }
+
 .card-container figure span {
     position: absolute;
     top: 85%;
@@ -306,7 +319,8 @@ input::placeholder {
     text-transform: lowercase;
     z-index: 2;
 }
-.card-container figure span::first-letter{
+
+.card-container figure span::first-letter {
     text-transform: uppercase;
 }
 
@@ -320,7 +334,8 @@ input::placeholder {
     text-align: center;
     gap: 2vw;
 }
-.choose-destination p{
+
+.choose-destination p {
     width: 50%;
 }
 
@@ -478,6 +493,7 @@ input::placeholder {
 .newsletter .sub input[type="button"] {
     color: white;
 }
+
 .newsletter .sub span::before {
     display: inline-block;
     content: "";
@@ -485,19 +501,23 @@ input::placeholder {
     width: 100%;
 
 }
+
 .newsletter .sub input::placeholder {
     background: rgba(19, 19, 24, 0.05);
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 20px;
 }
+
 .newsletter .img-container {
     position: relative;
 }
+
 .newsletter .img-container img {
     width: 100%;
     height: 100%;
 }
+
 .newsletter .img-container .rotate-btn {
     height: 25%;
     width: 50%;
@@ -574,27 +594,16 @@ footer .logo span {
     p {
         font-size: 14px;
         width: 100%;
-        line-height: 21px;
     }
 
     h1 {
         font-weight: var(--extra-bold);
-        font-size: var(--bigger-m);
+        font-size: 22px;
     }
 
-    h2 {
+    h2, h3, h4 {
         font-weight: var(--extra-bold);
-        font-size: var(--h2-m);
-    }
-
-    h3 {
-        font-size: var(--h3-m);
-        font-weight: var(--extra-bold);
-    }
-
-    h4 {
-        font-weight: var(--extra-bold);
-        font-size: var(--h4-m);
+        font-size: 20px;
     }
 
     nav {
@@ -607,7 +616,7 @@ footer .logo span {
     }
 
     nav .logo {
-        font-size: 4.3vw;
+        font-size: 1.5rem;
     }
 
     nav ul {
@@ -659,30 +668,39 @@ footer .logo span {
         width: 90%;
     }
 
-    .cards{
+    .popular-tours .discription {
+        gap: 1rem;
+    }
+
+    .cards {
         width: var(--m-width);
     }
+
     .cards .card-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4vw;
     }
-    .card-container figure{
+
+    .card-container figure {
         height: 250px;
     }
 
     .choose-destination {
         width: var(--m-width);
     }
-    .choose-destination .img-container, .choose-destination .img-container .box{
+
+    .choose-destination .img-container, .choose-destination .img-container .box {
         grid-template-rows: auto;
         grid-template-columns: 1fr;
         gap: 3vw;
     }
-    .choose-destination .img-container .box img{
+
+    .choose-destination .img-container .box img {
         height: 15rem;
     }
-    .choose-destination p{
+
+    .choose-destination p {
         width: 90%;
     }
 
